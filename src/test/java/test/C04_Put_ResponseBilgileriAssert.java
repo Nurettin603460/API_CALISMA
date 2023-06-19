@@ -37,6 +37,14 @@ public class C04_Put_ResponseBilgileriAssert {
 
         response.prettyPrint();
 
+        response.then()
+                    .assertThat()
+                .statusCode(200)
+                .contentType("application/json; charset=utf-8")
+                .header("Server", "cloudflare")
+                .statusLine("HTTP/1.1 200 OK");
+
+
     }
 
 }
