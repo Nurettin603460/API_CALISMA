@@ -15,15 +15,10 @@ public class C01_Get_APISorgulama {
     Response response =given().when().get(url);
 
     response.prettyPrint(); //Test bittikten sonra yoruma al
-
     System.out.println("Status code: "+ response.getStatusCode());
-
     System.out.println("Content Type :"+ response.getContentType());
-
     System.out.println("Server Header Değeri: " + response.getHeader("Server"));
-
     System.out.println("Status Line :"+ response.getStatusLine());
-
     System.out.println("Response Time: "+ response.getTime());
 
 
