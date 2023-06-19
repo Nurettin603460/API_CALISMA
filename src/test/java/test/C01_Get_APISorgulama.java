@@ -27,6 +27,7 @@ public class C01_Get_APISorgulama {
     System.out.println("Response Time: "+ response.getTime());
 
 
+
 }
 
 
