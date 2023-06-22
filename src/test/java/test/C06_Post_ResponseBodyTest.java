@@ -3,6 +3,7 @@ package test;
 import io.restassured.http.ContentType;
 import io.restassured.internal.RestAssuredResponseImpl;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.junit.Test;
 
@@ -31,6 +32,17 @@ public class C06_Post_ResponseBodyTest {
                          .when()
                 .body(reqBody.toString())
                 .post(url);
+        response.prettyPrint();
+
+        //4.Aşama: Assertion
+
+        response.then()
+                    .assertThat()
+                        .statusCode(201)
+                        .contentType("application/json")
+                        .body("title",Matchers.equalTo("API"))
+                        .body("userId", Matchers.lessThan(100))
+                        .body("body",Matchers.containsString("API"));
 
 
     }  
