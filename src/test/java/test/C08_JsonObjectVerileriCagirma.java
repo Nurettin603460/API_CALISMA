@@ -7,7 +7,7 @@ import org.junit.Test;
 public class C08_JsonObjectVerileriCagirma {
 
     @Test
-    public void jsonPath01(){
+    public void jsonObje01(){
 
         //1.aşama: içteki telefon bilgileri için Json objesi oluştur --Cep tel ve ev tel için ayrı oluştur:
 
