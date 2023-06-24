@@ -45,8 +45,14 @@ public class C08_JsonObjectVerileriCagirma {
         bilgilerJson.put("phoneNumbers", phoneNumbers);
 
         System.out.println(bilgilerJson);
-        System.out.println(bilgilerJson.getJSONObject("address").get("city"));
-        System.out.println(bilgilerJson.getJSONArray("phoneNumbers").getJSONObject(0).get("number"));
+        System.out.println(bilgilerJson
+                                        .getJSONObject("address")
+                                        .get("city")); //Nara
+        System.out.println(bilgilerJson
+                                        .getJSONArray("phoneNumbers")
+                                        .getJSONObject(0)
+                                        .get("number")); //0554-138-4992
 
+        // Not: get("keyName") metoduna key yazılır ama VALUE döndürür.
     }
 }

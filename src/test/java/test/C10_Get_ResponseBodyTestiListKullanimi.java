@@ -23,12 +23,9 @@ public class C10_Get_ResponseBodyTestiListKullanimi {
                                 .contentType(ContentType.JSON)
                           .when()
                                 .get(url);
-
       response.prettyPrint();
 
-
     //4. Aşama:Assertion:
-
         response
                 .then()
                         .assertThat()
