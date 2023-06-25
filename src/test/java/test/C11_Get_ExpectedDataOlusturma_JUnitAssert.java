@@ -15,7 +15,7 @@ public class C11_Get_ExpectedDataOlusturma_JUnitAssert {
         //1.Aşama: Endpoint hazırla. ihtiyaç varsa request body hazırla(3p)
         String url="https://jsonplaceholder.typicode.com/posts/22";
 
-        //2.Aşama: Expected Data Hazırla:
+        //2.Aşama: Expected Data Hazırla: (expectedBody=ResponseBody)
         JSONObject expData=new JSONObject();
         expData.put("userId",3);
         expData.put("id",22);

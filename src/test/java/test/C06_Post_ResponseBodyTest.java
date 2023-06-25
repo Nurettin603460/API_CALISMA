@@ -13,7 +13,7 @@ public class C06_Post_ResponseBodyTest {
 
     @Test
     public void post01(){
-            //1.aşama:
+            //1.aşama: EndPoint oluşturma. ihtiyaç varsa RequestBody oluştur(3p)
         String url= "https://jsonplaceholder.typicode.com/posts";
 
         JSONObject reqBody = new JSONObject();
@@ -23,8 +23,8 @@ public class C06_Post_ResponseBodyTest {
 
         System.out.println(reqBody);
 
-        // 2.Aşama: Expected Data:
-        // 3.Aşama: Response kaydet
+        // 2.Aşama: Expected Data: (expected data= response body)
+        // 3.Aşama: Response oluştur ve kaydet
 
         Response response=given()
                                 .contentType(ContentType.JSON)

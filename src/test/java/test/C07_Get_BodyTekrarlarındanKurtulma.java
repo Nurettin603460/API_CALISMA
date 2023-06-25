@@ -13,11 +13,11 @@ public class C07_Get_BodyTekrarlarındanKurtulma {
     @Test
     public void get01(){
 
-        //1. Url hazırla.
+        //1. Endpoint hazırla. ihtiyaç varsa request body hazırla. (put, patch, post)
         String url="https://restful-booker.herokuapp.com/booking/10";
 
         //2.Expected Data Hazırla.
-        //3. Response kaydet.
+        //3. Response oluştur ve kaydet.
 
         Response response= given().when().get(url);
         response.prettyPrint();
