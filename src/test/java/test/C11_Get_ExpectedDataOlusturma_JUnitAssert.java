@@ -45,6 +45,9 @@ public class C11_Get_ExpectedDataOlusturma_JUnitAssert {
         Assert.assertEquals(expData.get("id"), responseJsonPath.get("id"));
         Assert.assertEquals(expData.get("title"), responseJsonPath.get("title"));
 
+        // Not: expected için expectedData (JsonObject) olarak hazırladığımız JSONObject yolu kullanılır,
+        //      actual için ise JsonPath.e dönüştürdüğümüz responseJasonPath üzerinde JSONPath yolu kullanılır.
+
 
 
 

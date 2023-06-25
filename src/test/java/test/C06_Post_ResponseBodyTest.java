@@ -1,7 +1,6 @@
 package test;
 
 import io.restassured.http.ContentType;
-import io.restassured.internal.RestAssuredResponseImpl;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.json.JSONObject;

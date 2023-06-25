@@ -52,6 +52,9 @@ public class C09_Post_JsonPathBodyTesti {
                 .body("booking.bookingdates.checkin", equalTo("2021-06-01"))
                 .body("booking.bookingdates.checkout",equalTo("2021-06-10"));
 
+       //  Not: JSonPath yönteminde body.deki valule.lara ulaşmak için. (nokta) kullanılır.
+        // JSonObject yönteminde ise dıştan içe getJSONArray --> getJSONObject (index) --> get(key) yolu kullanılır.
+
 
     }
 }
