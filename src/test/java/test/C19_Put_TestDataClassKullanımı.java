@@ -1,10 +1,12 @@
 package test;
 
 import baseUrl.JsonPlaceHolderBaseUrl;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.testng.annotations.Test;
+
+import org.junit.Test;
 import org.testng.asserts.SoftAssert;
 import testData.TestDataJsonPlace;
 
@@ -21,10 +23,17 @@ public class C19_Put_TestDataClassKullanımı extends JsonPlaceHolderBaseUrl {
        JSONObject reqJsonObj=testDataJsonPlace.requestJsonBodyOlustur();
 
        //2.Aşama:
-        JSONObject expJsonObj=testDataJsonPlace.expectedJsonBodyOlustur();
-
+       JSONObject expJsonObj=testDataJsonPlace.requestJsonBodyOlustur();
+        // request body ile expected body birebir aynı olduğundan buraya yukarıdaki kodu aynen yazabiliriz:
+        // JSONObject reqJsonObj=testDataJsonPlace.requestJsonBodyOlustur();
         //3.Aşama:
-        Response response=given().spec(specJsonPlace).when().get("/{pp1}/{pp2}");
+        Response response=given()
+                                .spec(specJsonPlace)
+                                .contentType(ContentType.JSON)
+                            .when()
+                                .body(reqJsonObj.toString())
+                                .put("/{pp1}/{pp2}");
+
         response.prettyPrint();
 
         //4.Aşama:

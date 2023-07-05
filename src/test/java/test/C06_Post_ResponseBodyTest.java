@@ -31,6 +31,7 @@ public class C06_Post_ResponseBodyTest {
                          .when()
                 .body(reqBody.toString())
                 .post(url);
+
         response.prettyPrint();
 
         //4.Aşama: Assertion
