@@ -38,7 +38,7 @@ PUT request yolladigimizda donen response’in response body’sinin asagida ver
                .put("/{pp1}/{pp2}");
        response.prettyPrint();
 
-       //4.Aşama: Not:Dönüşüm için pomxml.e ekleme yapıldı: Gson
+       //4.Aşama: Not:Response objesi map.e dönüştürüldü. Dönüşüm için pomxml.e ekleme yapıldı: Gson
        HashMap<String, Objects> respMap=  response.as(HashMap.class);
         Assert.assertEquals(expBody.get("title"), respMap.get("title"));
 
