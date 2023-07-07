@@ -2,6 +2,9 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Objects;
+
 public class TestDataJsonPlace {
 
     public int basariliStatusCode=200;
@@ -26,5 +29,15 @@ public class TestDataJsonPlace {
         return reqJsonObj;
     }
 
+    public HashMap requestBodyOlusturMap(){
+       HashMap<String, Object> reqBody=new HashMap<>();
+        reqBody.put("title","Ahmet");
+        reqBody.put("body","Merhaba");
+        reqBody.put("userId",10);
+        reqBody.put("id",70);
+
+
+        return reqBody;
+    }
 
 }
