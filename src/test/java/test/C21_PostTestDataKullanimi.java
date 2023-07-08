@@ -61,9 +61,13 @@ Response Body
 
         //3.Aşama:
 
-        Response response=given().spec(specHerokuapp).contentType(ContentType.JSON)
-                .when().body(reqBody.toString()).post("/{pp1}");
-      //  response.prettyPrint();
+        Response response=given()
+                                .spec(specHerokuapp)
+                                .contentType(ContentType.JSON)
+                          .when()
+                                .body(reqBody.toString())
+                                .post("/{pp1}");
+        response.prettyPrint();
 
         //4.Aşama:
 

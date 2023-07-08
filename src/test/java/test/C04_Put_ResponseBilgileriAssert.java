@@ -28,9 +28,9 @@ public class C04_Put_ResponseBilgileriAssert {
         reqBodyJson.put("userId","10");
         reqBodyJson.put("id","70");
 
-        response=given()
+        response=given()   // Preconditions.lar yazılır.
                         .contentType(ContentType.JSON)
-                .when()
+                .when()    // request body ile ilgili bilgiler yazılır.
                         .body(reqBodyJson.toString())
                 .put(url);
 

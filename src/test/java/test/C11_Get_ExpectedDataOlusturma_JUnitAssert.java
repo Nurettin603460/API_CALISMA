@@ -31,7 +31,7 @@ public class C11_Get_ExpectedDataOlusturma_JUnitAssert {
                                 .get(url);
             response.prettyPeek(); // Response ile ilgili tüm detaylı bilgileri döndürür
 
-        /*4.aşama: Assertion: Expected data ile response karşılaştırma: (JUnit Assert kullanımı)
+        /*4.Aşama: Assertion: Expected data ile response karşılaştırma: (JUnit veya TestNG ile Assert kullanımı)
                     NOT: Önceki assertion.lar key-value şeklinde idi. Value yazılıyordu ama burada sadece key üzerinden  assertion yapılacaktır. (dinamik hale getirilecektir)
                         O yüzden matchers kullanılmayacaktır.
 

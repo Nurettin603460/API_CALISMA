@@ -41,6 +41,7 @@ public class C25_Put_PojoClass  extends JsonPlaceHolderBaseUrl {
     public void put01(){
         //1.Aşama: Endpoint ve Request Body hazirla.(3p)
     specJsonPlace.pathParams("pp1","posts","pp2",70);
+    // POJO denilen şey constructorlardan oluşan class.lardır. Burada belirli özelliklere sahip consructurlar.ı çağırma işlemi yapılmaktadır. POJO tamemen bir java objesidir.
 
     //Request Body için POJO clasından bir obje oluşturuyoruz. Parametreleri yazıyoru. dinamik yapmış oluyoruz. Java objesi olarak oluşturmuş oluyoruz.
         //Yani burada constructor call yapmış oluyoruz.

@@ -45,7 +45,7 @@ public class C09_Post_JsonPathBodyTesti {
                     assertThat()
                     .statusCode(200)
                     .contentType("application/json; charset=utf-8")
-                .body("booking.firstname", equalTo("Ali"))
+                .body("booking.firstname", equalTo("Ali")) //JSonPath yöntemi ile verilere ulaşılır.
                 .body("booking.lastname",equalTo("Bak"))
                 .body("booking.totalprice",equalTo(500))
                 .body("booking.depositpaid",equalTo(false))
