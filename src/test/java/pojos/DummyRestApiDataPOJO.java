@@ -21,7 +21,7 @@ public class DummyRestApiDataPOJO {
 
      private int id;
      private String employee_name;
-     private String employee_salary;
+     private int employee_salary;
      private int employee_age;
      private String profile_image;
 
